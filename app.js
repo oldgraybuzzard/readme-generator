@@ -74,20 +74,9 @@ const promptUser = () => {
                   return false;
                 }
             }
-        },
-        // {
-
-        // },
-        // {
-
-        // },
-
-    ])
+        }
+    ]);
 };
-
-promptUser()
-    .then()
-
 
 
 
