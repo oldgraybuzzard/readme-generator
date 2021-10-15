@@ -100,7 +100,13 @@ const writeFile = fileContent => {
 };
 
 // // TODO: Create a function to initialize app
-// function init() {}
+function init() {
+    inquirer.prompt(promptUser)
+        .then((userAnswers) => {
+            console.log("Generating your file, Just a few seconds more....");
+            writeToFile("./dist/README.md", generateMarkdown({ ...userAnswers }));
+        })
+}
 
 // // Function call to initialize app
-// init();
+init();
