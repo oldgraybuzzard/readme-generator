@@ -1,23 +1,15 @@
-const fs = require('fs');
 var inquirer = require('inquirer');
-const { queueScheduler } = require('rxjs');
-// markdown-it
-var MarkdownIt = require('markdown-it'),
-    md = new MarkdownIt();
-var result = md.render('# markdown-it rulezz!');
-// remark
-// import {reporter} from 'vfile-reporter'
-// import {remark} from 'remark'
-// import remarkPresetLintRecommended from 'remark-preset-lint-recommended'
-// import remarkHtml from 'remark-html'
+const fs = require('fs');
+const path = require("path");
+const generateMarkdown = require("./utils/generateMarkdown");
+
 
 //-------------------------------------------------
 //                  Code below
 //-------------------------------------------------
 
 // TODO: Create an array of questions for user input
-const promptUser = () => {
-    return inquirer.prompt([
+const promptUser = [
         {
             type: 'input',
             name: 'name',
@@ -33,7 +25,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'projectTitle',
+            name: 'title',
             message: 'What is the Title of Your Project? (Required)',
             validate: nameInput => {
                 if (nameInput) {
@@ -43,6 +35,12 @@ const promptUser = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: "checkbox",
+            name: "license",
+            message: "What license does your project have?",
+            choices: ["MIT", "APACHE2.0", "OpenBSD", "GPL3.0", "None"]
         },
         {
             type: 'input',
@@ -75,29 +73,32 @@ const promptUser = () => {
                 }
             }
         }
-    ]);
-};
+    ];
 
 
 
 // TODO: Create a function to write README file
-const writeFile = fileContent => {
-    return new Promise((resolve, reject) => {
-       fs.writeToFile('./dist/README.md', fileContent, err => {
-           //if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
-            if (err) {
-                reject(err);
-                //return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
-                return;
-            }
-            // if everything went well, resolve the Promise and send the successful data to the `.then()` method
-            resolve ({
-                ok: true,
-                message: 'Your README was created! You can find it in the /dist folder.'
-            });
-        }); 
-    });
-};
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
+
+// const writeFile = fileContent () => {
+//     return new Promise((resolve, reject) => {
+//        fs.writeToFile('./dist/README.md', fileContent, err => {
+//            //if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+//             if (err) {
+//                 reject(err);
+//                 //return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+//                 return;
+//             }
+//             // if everything went well, resolve the Promise and send the successful data to the `.then()` method
+//             resolve ({
+//                 ok: true,
+//                 message: 'Your README was created! You can find it in the /dist folder.'
+//             });
+//         }); 
+//     });
+// };
 
 // // TODO: Create a function to initialize app
 function init() {
