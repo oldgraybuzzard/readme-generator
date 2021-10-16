@@ -1,7 +1,7 @@
 var inquirer = require('inquirer');
 const fs = require('fs');
-const path = require("path");
-const generateMarkdown = require("./utils/generateMarkdown");
+const path = require('path');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 
 //-------------------------------------------------
@@ -37,10 +37,16 @@ const promptUser = [
             }
         },
         {
-            type: "checkbox",
-            name: "license",
-            message: "What license does your project have?",
-            choices: ["MIT", "APACHE2.0", "OpenBSD", "GPL3.0", "None"]
+            type: 'input',
+            name: 'dependencies',
+            message: 'Any dependencies to install?',
+            default: 'NPM'
+        },
+        {
+            type: 'checkbox',
+            name: 'license',
+            message: 'What license does your project have?',
+            choices: ['MIT', 'APACHE2.0', 'OpenBSD', 'GPL3.0', 'None']
         },
         {
             type: 'input',
@@ -64,7 +70,7 @@ const promptUser = [
         {
             type: 'input',
             name: 'installation',
-            message: 'Are there any unique steps to install your project? (Required)',
+            message: 'Provide any unique steps to install your project?',
             when: ({ confirmInstallation}) => {
                 if (confirmInstallation) {
                     return true;
@@ -72,7 +78,25 @@ const promptUser = [
                   return false;
                 }
             }
-        }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmContributors',
+            message: 'Do you have any contributors you would like to list?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'contributors',
+            message: 'List your contributors.',
+            when: ({ confirmContributors}) => {
+                if (confirmContributors) {
+                    return true;
+                } else {
+                  return false;
+                }
+            }
+        },
     ];
 
 
@@ -104,8 +128,8 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(promptUser)
         .then((userAnswers) => {
-            console.log("Generating your file, Just a few seconds more....");
-            writeToFile("./dist/README.md", generateMarkdown({ ...userAnswers }));
+            console.log('Generating your file, Just a few seconds more....');
+            writeToFile('./dist/README.md', generateMarkdown({ ...userAnswers }));
         })
 }
 
