@@ -24,6 +24,11 @@ const promptUser = [
             }
         },
         {
+            type: "input",
+            name: "email",
+            message: "What's your email?"
+        },
+        {
             type: 'input',
             name: 'title',
             message: 'What is the Title of Your Project? (Required)',
@@ -53,13 +58,19 @@ const promptUser = [
             type: 'input',
             name: 'dependencies',
             message: 'Any dependencies to install?',
-            default: 'NPM'
+            default: 'NPM Inquirer'
         },
         {
             type: 'list',
             name: 'license',
             message: 'What license does your project have?',
             choices: ['MIT', 'APACHE2.0', 'OpenBSD', 'GPL3.0', 'None']
+        },
+        {
+            type: "input",
+            name: "test",
+            message: "What command should be run to run tests?",
+            default: "None"
         },
         {
             type: 'input',
@@ -94,6 +105,24 @@ const promptUser = [
         },
         {
             type: 'confirm',
+            name: 'confirmFeatures',
+            message: 'Do you have any features you would like to list?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'feature',
+            message: 'List your project features.',
+            when: ({ confirmFeatures}) => {
+                if (confirmFeatures) {
+                    return true;
+                } else {
+                  return false;
+                }
+            }
+        },
+        {
+            type: 'confirm',
             name: 'confirmContributors',
             message: 'Do you have any contributors you would like to list?',
             default: true
@@ -110,32 +139,43 @@ const promptUser = [
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'contributorEmail',
+            message: 'List your contributors email.',
+            when: ({ confirmContributors}) => {
+                if (confirmContributors) {
+                    return true;
+                } else {
+                  return false;
+                }
+            }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmUsage',
+            message: 'Would you like to add any screen shots?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:',
+            when: ({confirmUsage}) => {
+                if (confirmUsage) {
+                    return true;
+                } else {
+                  return false;
+                }
+            }
+        },
+
     ];
-
-
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
-
-// const writeFile = fileContent () => {
-//     return new Promise((resolve, reject) => {
-//        fs.writeToFile('./dist/README.md', fileContent, err => {
-//            //if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
-//             if (err) {
-//                 reject(err);
-//                 //return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
-//                 return;
-//             }
-//             // if everything went well, resolve the Promise and send the successful data to the `.then()` method
-//             resolve ({
-//                 ok: true,
-//                 message: 'Your README was created! You can find it in the /dist folder.'
-//             });
-//         }); 
-//     });
-// };
 
 // // TODO: Create a function to initialize app
 function init() {

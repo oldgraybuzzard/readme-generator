@@ -1,41 +1,56 @@
 // function to generate markdown for the README
 function generateMarkdown(data) {
-  return `# ${data.title}
-  ${renderBadge(data.license)}
   
-  ## Github URL
-  [${data.github}](https://github.com/${data.github}/)
-;}
+  return `# ${data.title}
+      ${renderBadge(data.license)}
+  
+      ## Description
+      ${data.description}
 
-## Description
-${data.description}
+      ## Table of Contents
+      * [Installations](#dependencies)
+      * [Usage](#usage)
+      ${renderLink(data.license)}
 
-## Table of Contents
-* [Installations](#dependencies)
+      * [Contributors](#contributors)
 
-* [Usage](#usage)
-${renderLink(data.license)}
+      * [Test](#test)
 
-* [Contributors](#contributors)
-* [Test](#test)
-## Installations (Dependencies) 💻
-To install dependencies, run these commands:
-\`\`\`
-${data.dependencies}
-\`\`\`
-## Usage 🏆
-${data.usage}
-${renderSection(data.license)}
-## Contributors 😃
-${data.contributors}
-Contact me at ${data.email}
-## Tests 🧪
-To run tests, run these commands:
-\`\`\`
-${data.test}
-\`\`\`
-`;
-}
+      ## Installations (Dependencies) 💻
+          To install dependencies, run these commands:
+          \`\`\`
+          ${data.dependencies}
+          \`\`\`
+          ## Github URL
+            [${data.github}](https://github.com/${data.github}/)
+          ;}
+
+      ## Usage 🏆
+        ${data.usage}
+        ${renderSection(data.license)}
+
+      ## Contributors 😃
+        ${data.contributors}
+
+        * Contact me at ${data.email}
+        * Contact my contributors at ${data.contributorEmail}
+
+      ## License
+        ${data.license}
+
+      ## Badges
+        https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
+
+      ## Features
+        ${data.feature}  
+
+      ## Tests 🧪
+        To run tests, run these commands:
+        \`\`\`
+        ${data.test}
+        \`\`\`
+        `;
+      }
 
 // Function to render badge
 function renderBadge(license) {
