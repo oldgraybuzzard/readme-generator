@@ -38,12 +38,25 @@ const promptUser = [
         },
         {
             type: 'input',
+            name: 'github',
+            message: 'What is the url of Your Project? (Required)',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a url for your project!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
             name: 'dependencies',
             message: 'Any dependencies to install?',
             default: 'NPM'
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'What license does your project have?',
             choices: ['MIT', 'APACHE2.0', 'OpenBSD', 'GPL3.0', 'None']
@@ -129,6 +142,7 @@ function init() {
     inquirer.prompt(promptUser)
         .then((userAnswers) => {
             console.log('Generating your file, Just a few seconds more....');
+            console.log('Your file is created and located in the /dist folder.');
             writeToFile('./dist/README.md', generateMarkdown({ ...userAnswers }));
         })
 }
