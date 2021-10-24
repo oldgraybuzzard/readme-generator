@@ -1,17 +1,17 @@
 # another Test
       
   
-      ## Description
-      go buck wild
+## Description
+go buck wild
 
-      ## Table of Contents
-      * [Installations](#dependencies)
-      * [Usage](#usage)
-      * [Contributors](#contributors)
-      * [License](#license)
-      * [Badges](#badges)
-      * [Features](#features)
-      * [Test](#test)
+## Table of Contents
+* [Installations](#dependencies)
+* [Usage](#usage)
+* [Contributors](#contributors)
+* [License](#license)
+* [Badges](#badges)
+* [Features](#features)
+* [Test](#test)
 
       ## Installations (Dependencies) 💻
           To install dependencies, run these commands:
