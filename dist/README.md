@@ -23,7 +23,7 @@ go buck wild
  ;}
 
  ## Usage 🏆
- dist/assets/images/Black background.png
+ ./dist/assets/images/Black background.png
         
 
  ## Contributors 😃
