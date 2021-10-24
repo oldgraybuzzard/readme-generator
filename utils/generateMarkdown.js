@@ -10,12 +10,11 @@ ${data.description}
 
 ## Table of Contents
 * [Installations](#dependencies)
-* [Usage](#usage)
-${renderLink(data.license)}
 * [Contributors](#contributors)
 * [Features](#features)
 * [Tests](#tests)
-
+${renderLink(data.usage)}
+${renderLink(data.license)}
 
 ## Installations (Dependencies) 💻
 To install dependencies, run these commands:
@@ -26,10 +25,6 @@ ${data.dependencies}
 ## Github URL
 [${data.github}](https://github.com/${data.github}/)
  ;}
-
-## Usage 🏆
-${data.usage}
-${renderSection(data.license)}
 
 ## Contributors 😃
 ${data.contributors}
@@ -45,6 +40,10 @@ To run tests, run these commands:
 \`\`\`
 ${data.test}
 \`\`\`
+
+${renderSection(data.usage)}
+
+${renderSection(data.license)}
 `;
 }
 
@@ -77,9 +76,22 @@ function renderLink(license) {
     return (
       `* [License](#license)`
     )
-  }
+  } else {
   return ''
+  }
 }
+
+// Function to render usage link
+function renderLink(confirmUsage) {
+  if (confirmUsage === true) {
+    return (
+      `* [Usage](#usage)`
+    )
+  } else {
+    return ''
+  }
+}
+
 
 
 // Function to render section
@@ -92,8 +104,21 @@ function renderSection(license) {
       Licensed under the ${license} license.`
 
     )
-  } else {}
+  } else {
   return ''
+ }
+}
+
+// function to render usage section
+function renderSection(confirmUsage, usage) {
+  if (confirmUsage === true) {
+    return (
+      `## Usage
+      ${usage}`
+    )
+  } else {
+    return ''
+  }
 }
 
 module.exports = generateMarkdown;

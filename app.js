@@ -77,7 +77,7 @@ const promptUser = [
             type: 'list',
             name: 'license',
             message: 'What license does your project have?',
-            choices: ['MIT', 'APACHE2.0', 'OpenBSD', 'GPL3.0', 'None']
+            choices: ['None', 'MIT', 'APACHE2.0', 'OpenBSD', 'GPL3.0']
         },
         {
             type: "input",
