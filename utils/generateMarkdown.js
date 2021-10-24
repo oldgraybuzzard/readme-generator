@@ -55,7 +55,7 @@ function generateMarkdown(data) {
 // Function to render badge
 function renderBadge(license) {
   if (license !== "None") {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-yellowgreen.svg)`
+    return `[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)`
   }
   return ''
 }
