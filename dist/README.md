@@ -13,37 +13,37 @@ go buck wild
 * [Features](#features)
 * [Test](#test)
 
-      ## Installations (Dependencies) 💻
-          To install dependencies, run these commands:
-          ```
-          Inquirer and FS
-          ```
-          ## Github URL
-            [kdjdjkf](https://github.com/kdjdjkf/)
-          ;}
+ ## Installations (Dependencies) 💻
+ To install dependencies, run these commands:
+ ```
+ Inquirer and FS
+ ```
+ ## Github URL
+ [kdjdjkf](https://github.com/kdjdjkf/)
+ ;}
 
-      ## Usage 🏆
-        ./assets/images/black ground.png 
+ ## Usage 🏆
+ ./assets/images/black ground.png 
         
 
-      ## Contributors 😃
-        dkjfkdjfkdjfk
+ ## Contributors 😃
+ dkjfkdjfkdjfk
 
-        * Contact me at kfelder@me.com
-        * Contact my contributors at dkjfkdjfkdf
+ * Contact me at kfelder@me.com
+ * Contact my contributors at dkjfkdjfkdf
 
-      ## License
-        None
+## License
+None
 
-      ## Badges
-        https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
+## Badges
+https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
 
-      ## Features
-        kdfjkdkjfkdf  
+## Features
+kdfjkdkjfkdf  
 
-      ## Tests 🧪
-        To run tests, run these commands:
-        ```
-        None
-        ```
+## Tests 🧪
+To run tests, run these commands:
+```
+None
+```
         
