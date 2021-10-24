@@ -160,7 +160,7 @@ const promptUser = [
         {
             type: 'input',
             name: 'usage',
-            message: 'To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax: /dist/assets/images/##IMAGE FILE##',
+            message: 'To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax: ![alt text](dist/assets/images/##IMAGE FILE##)',
             when: ({confirmUsage}) => {
                 if (confirmUsage) {
                     return true;

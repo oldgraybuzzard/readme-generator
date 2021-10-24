@@ -7,12 +7,15 @@ ${renderBadge(data.license)}
   
 ## Description
 ${data.description}
+
 ## Table of Contents
 * [Installations](#dependencies)
 * [Usage](#usage)
+${renderLink(data.license)}
 * [Contributors](#contributors)
 * [Features](#features)
 * [Tests](#tests)
+
 
 ## Installations (Dependencies) 💻
 To install dependencies, run these commands:
@@ -72,7 +75,7 @@ function renderBadge(license) {
 function renderLink(license) {
   if (license !== "None") {
     return (
-      `\n* [License](#license)\n`
+      `* [License](#license)`
     )
   }
   return ''
