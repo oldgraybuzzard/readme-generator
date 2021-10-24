@@ -35,7 +35,7 @@ fdkjfkdjf
 * Contact my contributors at fkdjfjkdkjf
 
 ## Features
-dist/assets/image/black background.png 
+./dist/assets/image/black background.png 
 
 ## Tests 🧪
 To run tests, run these commands:
