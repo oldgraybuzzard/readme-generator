@@ -1,8 +1,8 @@
-# kdjfkdjf
+# ktjktj
       ![GitHub license](https://img.shields.io/badge/license-MIT-yellowgreen.svg)
   
       ## Description
-      kdfjkdjf
+      kjfdkjfkjdkfj
 
       ## Table of Contents
       * [Installations](#dependencies)
@@ -18,23 +18,24 @@
       ## Installations (Dependencies) 💻
           To install dependencies, run these commands:
           ```
-          djfkjdkfj
+          Inquirer, FS
           ```
           ## Github URL
-            [kdjfkdjf](https://github.com/kdjfkdjf/)
+            [afalkdjfklaj](https://github.com/afalkdjfklaj/)
           ;}
 
       ## Usage 🏆
-        undefined
+        
         ## License 📛
       Copyright © MIT. All rights reserved. 
       
       Licensed under the MIT license.
 
       ## Contributors 😃
-        djfkdjkf
-        Contact me at fkdfj
-        Contact my contributors at dkfjkdjfk
+        Kjkfjdkjfj
+
+        * Contact me at k_felder@me.com
+        * Contact my contributors at dkfjdkjfkd
 
       ## License
         MIT
@@ -43,11 +44,11 @@
         https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
 
       ## Features
-        djfkdjfkdjf  
+        kdjfkdjfkjd  
 
       ## Tests 🧪
         To run tests, run these commands:
         ```
-        kdfjkd
+        None
         ```
         

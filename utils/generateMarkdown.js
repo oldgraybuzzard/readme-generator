@@ -10,10 +10,10 @@ function generateMarkdown(data) {
       ## Table of Contents
       * [Installations](#dependencies)
       * [Usage](#usage)
-      ${renderLink(data.license)}
-
       * [Contributors](#contributors)
-
+      * [License](#license)
+      * [Badges](#badges)
+      * [Features](#features)
       * [Test](#test)
 
       ## Installations (Dependencies) 💻
