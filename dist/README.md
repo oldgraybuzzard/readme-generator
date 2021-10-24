@@ -23,7 +23,7 @@ go buck wild
  ;}
 
  ## Usage 🏆
- https://github.com/oldgraybuzzard/readme-generator/blob/955e3fcabd8aab6a3c78dfc1d5cd06f58b49e82c/dist/assets/images/Black%20background.png
+ dist/assets/images/Black background.png
         
 
  ## Contributors 😃
