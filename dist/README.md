@@ -1,43 +1,47 @@
-# dkfjkdjfk
+# kdjfkdjkfj
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
 ## Description
-dkfjkdjfk
+kdjfkjdkjf
 
 ## Table of Contents
 * [Installations](#dependencies)
+* [Usage](#usage)
+* [License](#license)
 * [Contributors](#contributors)
 * [Features](#features)
 * [Tests](#tests)
 
 
-
 ## Installations (Dependencies) 💻
 To install dependencies, run these commands:
 ```
-In
+akkadjkfdj
 ```
 
 ## Github URL
-[dkjfkdjkf](https://github.com/dkjfkdjkf/)
+[djfkdjfkj](https://github.com/djfkdjfkj/)
  ;}
 
-## Contributors 😃
-dkfkdjf
+## Usage 🏆
 
-* Contact me at kdfjk
-* Contact my contributors at dkfjkdfj
+## License 📛
+      Copyright © MIT. All rights reserved. 
+      
+      Licensed under the MIT license.
+
+## Contributors 😃
+undefined
+
+* Contact me at kdjfkdjf
+* Contact my contributors at undefined
 
 ## Features
-dkfjkdjf  
+dkfjkdfkj  
 
 ## Tests 🧪
 To run tests, run these commands:
 ```
-none
+dkfjdkfjd
 ```
-
-
-
-
