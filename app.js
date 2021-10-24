@@ -43,6 +43,19 @@ const promptUser = [
         },
         {
             type: 'input',
+            name: 'description',
+            message: 'Describe your project: (Required)',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a description for your project!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
             name: 'github',
             message: 'What is the url of Your Project? (Required)',
             validate: nameInput => {
@@ -71,19 +84,6 @@ const promptUser = [
             name: "test",
             message: "What command should be run to run tests?",
             default: "None"
-        },
-        {
-            type: 'input',
-            name: 'description',
-            message: 'Describe your project: (Required)',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter a description for your project!');
-                    return false;
-                }
-            }
         },
         {
             type: 'confirm',
@@ -160,7 +160,7 @@ const promptUser = [
         {
             type: 'input',
             name: 'usage',
-            message: 'To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax, "',
+            message: 'To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax: /dist/assets/images/##IMAGE FILE##',
             when: ({confirmUsage}) => {
                 if (confirmUsage) {
                     return true;
