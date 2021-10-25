@@ -1,14 +1,13 @@
-# kdjfkdjkfj
+# dkfkdjf
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
   
 ## Description
-kdjfkjdkjf
+dkfjdkjf
 
 ## Table of Contents
 * [Installations](#dependencies)
 * [Usage](#usage)
-* [License](#license)
 * [Contributors](#contributors)
 * [Features](#features)
 * [Tests](#tests)
@@ -17,31 +16,45 @@ kdjfkjdkjf
 ## Installations (Dependencies) 💻
 To install dependencies, run these commands:
 ```
-akkadjkfdj
+NPM Inquirer
 ```
 
 ## Github URL
-[djfkdjfkj](https://github.com/djfkdjfkj/)
+[dkfkdjf](dkfjdfj)
  ;}
 
 ## Usage 🏆
-
-## License 📛
-      Copyright © MIT. All rights reserved. 
-      
-      Licensed under the MIT license.
-
-## Contributors 😃
 undefined
 
-* Contact me at kdjfkdjf
-* Contact my contributors at undefined
+
+## Contributors 😃
+[dkjfkdj](https://github.com/dkjfkdj)
+* Contact me at 
+
+function renderContributors(contributors) {
+  if (contributors !== "None" || "none" || "") {
+    return (
+      `${contributors}`
+    )
+    } else {
+    return ''
+  }
+}
+function renderContributorEmail(contributorEmail) {
+  if (contributorEmail !== "None" || "none" || "") {
+    return (
+      `* Contact my contributors at: ${contributorEmail}`
+    )
+  } else {
+    return ''
+  }
+}
 
 ## Features
-dkfjkdfkj  
+jfdkjfk  
 
 ## Tests 🧪
 To run tests, run these commands:
 ```
-dkfjdkfjd
+None
 ```

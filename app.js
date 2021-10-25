@@ -113,6 +113,7 @@ const promptUser = [
             type: 'input',
             name: 'feature',
             message: 'List your project features.',
+            default: 'None',
             when: ({ confirmFeatures}) => {
                 if (confirmFeatures) {
                     return true;
@@ -121,35 +122,37 @@ const promptUser = [
                 }
             }
         },
-        {
-            type: 'confirm',
-            name: 'confirmContributors',
-            message: 'Do you have any contributors you would like to list?',
-            default: true
-        },
+        // {
+        //     type: 'confirm',
+        //     name: 'confirmContributors',
+        //     message: 'Do you have any contributors you would like to list?',
+        //     default: true
+        // },
         {
             type: 'input',
             name: 'contributors',
             message: 'List your contributors.',
-            when: ({ confirmContributors}) => {
-                if (confirmContributors) {
-                    return true;
-                } else {
-                  return false;
-                }
-            }
+            default: "None"
+            // when: ({ confirmContributors}) => {
+            //     if (confirmContributors) {
+            //         return true;
+            //     } else {
+            //       return false;
+            //     }
+            // }
         },
         {
             type: 'input',
             name: 'contributorEmail',
             message: 'List your contributors email.',
-            when: ({ confirmContributors}) => {
-                if (confirmContributors) {
-                    return true;
-                } else {
-                  return false;
-                }
-            }
+            default: "None"
+            // when: ({ confirmContributors}) => {
+            //     if (confirmContributors) {
+            //         return true;
+            //     } else {
+            //       return false;
+            //     }
+            // }
         },
         {
             type: 'confirm',
@@ -160,7 +163,7 @@ const promptUser = [
         {
             type: 'input',
             name: 'usage',
-            message: 'To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax: ![alt text](dist/assets/images/##IMAGE FILE##)',
+            message: 'To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax: ![alt text](/assets/images/##IMAGE FILE##)',
             when: ({confirmUsage}) => {
                 if (confirmUsage) {
                     return true;

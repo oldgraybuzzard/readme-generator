@@ -11,11 +11,10 @@ ${data.description}
 ## Table of Contents
 * [Installations](#dependencies)
 * [Usage](#usage)
-${renderLink(data.license)}
 * [Contributors](#contributors)
 * [Features](#features)
 * [Tests](#tests)
-
+${renderLink(data.license)}
 
 ## Installations (Dependencies) 💻
 To install dependencies, run these commands:
@@ -24,7 +23,7 @@ ${data.dependencies}
 \`\`\`
 
 ## Github URL
-[${data.github}](https://github.com/${data.github}/)
+[${data.title}](${data.github})
  ;}
 
 ## Usage 🏆
@@ -32,10 +31,11 @@ ${data.usage}
 ${renderSection(data.license)}
 
 ## Contributors 😃
-${data.contributors}
-
+[${data.name}](https://github.com/${data.name})
 * Contact me at ${data.email}
-* Contact my contributors at ${data.contributorEmail}
+
+${renderContributors(data.contributors)}
+${renderContributorEmail(data.contributorEmail)}
 
 ## Features
 ${data.feature}  
@@ -69,7 +69,7 @@ function renderBadge(license) {
       }
     }
   }
-}
+};
 
 // Function to render link
 function renderLink(license) {
@@ -77,11 +77,10 @@ function renderLink(license) {
     return (
       `* [License](#license)`
     )
-  }
+  } else {
   return ''
-}
-
-
+  }
+};
 
 // Function to render section
 function renderSection(license) {
@@ -93,8 +92,29 @@ function renderSection(license) {
       Licensed under the ${license} license.`
 
     )
-  } else {}
+  } else {
   return ''
-}
+  }
+};
+
+function renderContributors(contributors) {
+  if (contributors !== "None" || "none" || "") {
+    return (
+      `${contributors}`
+    )
+    } else {
+    return ''
+  }
+};
+
+function renderContributorEmail(contributorEmail) {
+  if (contributorEmail !== "None" || "none" || "") {
+    return (
+      `* Contact my contributors at: ${contributorEmail}`
+    )
+  } else {
+    return ''
+  }
+};
 
 module.exports = generateMarkdown;
