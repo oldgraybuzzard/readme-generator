@@ -23,9 +23,12 @@ Node.JS, NPM, Inquirer
 [Markdown README Generator](https://github.com/oldgraybuzzard/readme-generator.git)
 
 ## Usage 🏆
-assets/images/Clean VS Code.PNG
-![]assets/images/genMarksdown.png
-![]assets/images/questions.png
+https://github.com/oldgraybuzzard/readme-generator/blob/dab6e58d564e807a4bec9cfc489c9ff97f46e52e/assets/images/Clean%20VS%20Code.PNG
+https://github.com/oldgraybuzzard/readme-generator/blob/8271aa4ee54d6bec45ff645300cd6dbe62011e85/assets/images/genMarkdown.PNG
+https://github.com/oldgraybuzzard/readme-generator/blob/8271aa4ee54d6bec45ff645300cd6dbe62011e85/assets/images/questions.PNG
+
+### Video Link Walkthrough
+https://watch.screencastify.com/v/MkbdcQAWwMgWVxAnygfp
 
 
 ## Contributors 😃
