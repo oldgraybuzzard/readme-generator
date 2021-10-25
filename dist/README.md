@@ -1,9 +1,9 @@
-# dkfkdjf
+# Readme Generator
 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
   
 ## Description
-dkfjdkjf
+Application developed using Node to create a readme file
 
 ## Table of Contents
 * [Installations](#dependencies)
@@ -16,42 +16,26 @@ dkfjdkjf
 ## Installations (Dependencies) 💻
 To install dependencies, run these commands:
 ```
-NPM Inquirer
+Node, NPM, Induirer
 ```
 
 ## Github URL
-[dkfkdjf](dkfjdfj)
+[Readme Generator](https://github.com/oldgraybuzzard/readme-generator.git)
  ;}
 
 ## Usage 🏆
-undefined
+![](assets/images/genmarkdown.png)
 
 
 ## Contributors 😃
-[dkjfkdj](https://github.com/dkjfkdj)
-* Contact me at 
+[oldgraybuzzard](https://github.com/oldgraybuzzard)
+* Contact me at k_felder@me.com
 
-function renderContributors(contributors) {
-  if (contributors !== "None" || "none" || "") {
-    return (
-      `${contributors}`
-    )
-    } else {
-    return ''
-  }
-}
-function renderContributorEmail(contributorEmail) {
-  if (contributorEmail !== "None" || "none" || "") {
-    return (
-      `* Contact my contributors at: ${contributorEmail}`
-    )
-  } else {
-    return ''
-  }
-}
+None
+* Contact my contributors at: None
 
 ## Features
-jfdkjfk  
+None  
 
 ## Tests 🧪
 To run tests, run these commands:
